@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/logo final.png">
+  <title>Skip Story Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family: dongle; color: white; height: 1000px; background-color: rgb(255, 255, 255);">
+  <nav class="nav-bar">
+    <div class="bar">
+      <a onclick="showPage('home')" class="nav-text">Home</a>
+      <a onclick="showPage('accounts')" class="nav-text">Accounts</a>
+      <a onclick="showPage('boosting')" class="nav-text">Boosting</a>
+    </div>
+    <div class="bar1">
+      <a onclick="showPage('about')" class="nav-text">About</a>
+    </div>
+  </nav>
+  <div id>
+    <div id="home" class="page">
+      <div class="main" style="display: grid; gap: 10px;">
+        <div class="group">
+          <div class="text-kategori">Account Zenlees Zone Zero</div>
+          <div style="padding: 10px;">
+            <div class="card">
+              <div><img src="img/1.jpg" alt=""></div>
+              <div>
+                <div>Title</div>
+                <div>Price</div>
+                <div>stock</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="text-kategori">Account Honkai Star Rail</div>
+          <div style="padding: 10px;">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="accounts" class="page" style="display: none;">
+      <h1>Accounts Page</h1>
+      <p>This is the accounts page content.</p>
+    </div>
+    <div id="boosting" class="page" style="display: none;">
+      <h1>Boosting Page</h1>
+      <p>This is the boosting page content.</p>
+    </div>
+    <div id="about" class="page" style="display: none;">
+      <h1>About Page</h1>
+      <p>This is the about page content.</p>
+    </div>
+  </div>
+  <script>
+    function showPage(page) {
+      document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+      document.getElementById(page).style.display = 'block';
+    }
+    showPage('home');
+  </script>
+</body>
+</html>
